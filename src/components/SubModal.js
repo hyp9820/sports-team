@@ -229,8 +229,8 @@ export const SubModal = forwardRef(({ agebracket, handleParentClose }, ref) => {
       </Modal.Header>
       <Modal.Body>
         <center>
-          <h2>What type of age bracket is needed?</h2>
-          <p>Make a selection based on the desired age group!</p>
+          <h2>What specific details are needed for this divison?</h2>
+          <p>Make a selection based on the options given below!</p>
         </center>
         <hr />
         <Form onSubmit={handleFormSubmit}>

@@ -20,7 +20,10 @@ export const AgeBracketModal = forwardRef((props, ref) => {
     },
   }));
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    setAgebracket("");
+  };
   const handleNext = () => {
     if (agebracket === "adult" || agebracket === "junior") {
       modalRef.current.handleShow();
