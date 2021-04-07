@@ -28,7 +28,18 @@ export const AgeBracketModal = forwardRef((props, ref) => {
     if (agebracket === "adult" || agebracket === "junior") {
       modalRef.current.handleShow();
     } else {
+      _setAlertShow(true);
+    }
+  };
+
+  const _setAlertShow = (bool) => {
+    if (bool) {
       setAlertShow(true);
+      setTimeout(() => {
+        setAlertShow(false);
+      }, 5000);
+    } else {
+      setAlertShow(false);
     }
   };
 
@@ -68,7 +79,7 @@ export const AgeBracketModal = forwardRef((props, ref) => {
               <Alert
                 show={alertShow}
                 variant="danger"
-                onClose={() => setAlertShow(false)}
+                onClose={() => _setAlertShow(false)}
                 dismissible
               >
                 <Alert.Heading>Required Field</Alert.Heading>

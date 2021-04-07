@@ -83,12 +83,22 @@ export const SubModal = forwardRef(({ agebracket, handleParentClose }, ref) => {
       };
     }
     if (newTeam.skills.length === 0) {
-      setAlertShow(true);
+      _setAlertShow(true);
       return;
     }
     insertTeam(newTeam);
     handleParentClose();
     handleClose();
+  };
+  const _setAlertShow = (bool) => {
+    if (bool) {
+      setAlertShow(true);
+      setTimeout(() => {
+        setAlertShow(false);
+      }, 5000);
+    } else {
+      setAlertShow(false);
+    }
   };
 
   const adult = (
@@ -197,7 +207,7 @@ export const SubModal = forwardRef(({ agebracket, handleParentClose }, ref) => {
           <Alert
             show={alertShow}
             variant="danger"
-            onClose={() => setAlertShow(false)}
+            onClose={() => _setAlertShow(false)}
             dismissible
           >
             <Alert.Heading>Required Field - Skills</Alert.Heading>
@@ -291,7 +301,7 @@ export const SubModal = forwardRef(({ agebracket, handleParentClose }, ref) => {
           <Alert
             show={alertShow}
             variant="danger"
-            onClose={() => setAlertShow(false)}
+            onClose={() => _setAlertShow(false)}
             dismissible
           >
             <Alert.Heading>Required Field - Skills</Alert.Heading>
