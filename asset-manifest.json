@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sports-team/static/css/main.cbd038c6.chunk.css",
-    "main.js": "/sports-team/static/js/main.ea0f2a9f.chunk.js",
-    "main.js.map": "/sports-team/static/js/main.ea0f2a9f.chunk.js.map",
+    "main.js": "/sports-team/static/js/main.64ad91f4.chunk.js",
+    "main.js.map": "/sports-team/static/js/main.64ad91f4.chunk.js.map",
     "runtime-main.js": "/sports-team/static/js/runtime-main.4d42aad6.js",
     "runtime-main.js.map": "/sports-team/static/js/runtime-main.4d42aad6.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/sports-team/static/css/2.20aa2d7b.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.765c95f4.chunk.js",
     "static/css/main.cbd038c6.chunk.css",
-    "static/js/main.ea0f2a9f.chunk.js"
+    "static/js/main.64ad91f4.chunk.js"
   ]
 }
