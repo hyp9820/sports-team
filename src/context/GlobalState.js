@@ -1,8 +1,8 @@
 import React, { createContext, useReducer } from "react";
-// import AppReducer from "./AppReducer";
+import { INSERT_TEAM, DELETE_TEAM } from "./Actions";
+import AppReducer from "./AppReducer";
 
-// Initial State
-
+// ? Initial State 👍
 const initialState = {
   teams: [
     {
@@ -38,42 +38,24 @@ const initialState = {
   ],
 };
 
-// Create Context
+// ? Create Context 👍
 export const GlobalContext = createContext(initialState);
 
-// App Reducer
-const AppReducer = (state, action) => {
-  switch (action.type) {
-    case "INSERT_TEAM":
-      return {
-        ...state,
-        teams: [action.payload, ...state.teams],
-      };
-    case "DELETE_TEAM":
-      return {
-        ...state,
-        teams: state.teams.filter((team) => team.id !== action.payload),
-      };
-    default:
-      return state;
-  }
-};
-
-// Provider Component
+// ? Provider Component 👍
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  // Actions
+  // ? Actions 👍
   function deleteTeam(id) {
     dispatch({
-      type: "DELETE_TEAM",
+      type: DELETE_TEAM,
       payload: id,
     });
   }
 
   function insertTeam(team) {
     dispatch({
-      type: "INSERT_TEAM",
+      type: INSERT_TEAM,
       payload: team,
     });
   }

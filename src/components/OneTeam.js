@@ -9,13 +9,14 @@ export const OneTeam = ({ team }) => {
     <>
       <li className={team.agebracket}>
         <span>
-          <b>{team.name}</b> <br />
+          <h4>{team.name}</h4>
           Age Bracket: {team.agebracket} <br />
           Gender: {team.gender}
         </span>
         <span className="right">
-          Age: {team.age_range} <br />
-          Skills: | {team.skills.map((s) => s + " | ")}
+          Age: {team.age_range}
+          <br />
+          Skills: {team.skills.map((s) => "🔸" + s)}
         </span>
         <Button
           variant="danger"
@@ -30,12 +31,13 @@ export const OneTeam = ({ team }) => {
     <>
       <li className={team.agebracket}>
         <span>
-          <b>{team.name}</b> <br />
+          <h4>{team.name}</h4>
           Age Bracket: {team.agebracket}
         </span>
         <span className="right">
-          Age: {team.age_range} <br />
-          Skills: | {team.skills.map((s) => s + " | ")}
+          Age: {team.age_range}
+          <br />
+          Skills: {team.skills.map((s) => "🔸" + s)}
         </span>
         <Button
           variant="danger"
