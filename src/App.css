@@ -41,7 +41,7 @@ body {
 }
 
 .right .left{
-  text-align: left;
+  text-align: start;
 }
 
 .list li {
@@ -89,8 +89,17 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .container {
     width: 80vw;
+  }
+  .list li {
+    display: block;
+  }
+
+  .list li .right{
+    margin-top: 0;
+    display: block;
+    text-align: start;
   }
 }

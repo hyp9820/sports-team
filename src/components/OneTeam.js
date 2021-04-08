@@ -10,7 +10,10 @@ export const OneTeam = ({ team }) => {
       <li className={team.agebracket}>
         <span>
           <h4>{team.name}</h4>
-          Age Bracket: {team.agebracket} <br />
+          Age Bracket:{" "}
+          {team.agebracket.charAt(0).toUpperCase() +
+            team.agebracket.slice(1)}{" "}
+          <br />
           Gender: {team.gender}
         </span>
         <span className="right">
@@ -32,7 +35,8 @@ export const OneTeam = ({ team }) => {
       <li className={team.agebracket}>
         <span>
           <h4>{team.name}</h4>
-          Age Bracket: {team.agebracket}
+          Age Bracket:{" "}
+          {team.agebracket.charAt(0).toUpperCase() + team.agebracket.slice(1)}
         </span>
         <span className="right">
           Age: {team.age_range}
